@@ -1,6 +1,6 @@
 {
   "name": "bytehappens-logging-winston",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ByteHappens Logging with Winston Package for Node.js",
   "author": "Ewan \"ScottChak\" BURNS",
   "keywords": [
@@ -23,7 +23,7 @@
     "test": "mocha tests/*.tests.ts -r ts-node/register --reporter spec --exit"
   },
   "dependencies": {
-    "bytehappens": "0.0.3",
+    "bytehappens": "0.0.4",
     "winston": "^3.2.1",
     "winston-mongodb": "^4.0.3",
     "winston-telegram": "^2.0.0"
