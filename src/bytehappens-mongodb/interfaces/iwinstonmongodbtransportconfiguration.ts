@@ -1,9 +1,9 @@
-import { IMongoDbConnection, IMongoDbUser } from "common/storage/mongodb";
+import { mongodb } from "bytehappens-storage-mongodb";
 
 import { IWinstonTransportConfiguration } from "../../bytehappens-winston";
 
 export interface IWinstonMongoDbTransportConfiguration extends IWinstonTransportConfiguration {
-  connection: IMongoDbConnection;
-  user: IMongoDbUser;
+  connection: mongodb.IMongoDbConnection;
+  user: mongodb.IMongoDbUser;
   collection: string;
 }

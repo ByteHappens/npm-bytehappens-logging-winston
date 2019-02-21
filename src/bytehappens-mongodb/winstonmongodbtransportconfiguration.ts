@@ -1,24 +1,19 @@
 import { MongoClient } from "mongodb";
 let MongoDB = require("winston-mongodb").MongoDB;
 
+import { mongodb } from "bytehappens-storage-mongodb";
+
 import { BaseWinstonTransportConfiguration } from "../bytehappens-winston";
-import {
-  IMongoDbConnection,
-  IMongoDbUser,
-  ValidateMongoDbConnection,
-  ValidateMongoDbUser,
-  CreateMongoDbClientAsync
-} from "common/storage/mongodb";
 
 import { IWinstonMongoDbTransportConfiguration } from "./interfaces/iwinstonmongodbtransportconfiguration";
 
 export class WinstonMongoDbTransportConfiguration extends BaseWinstonTransportConfiguration
   implements IWinstonMongoDbTransportConfiguration {
-  public readonly connection: IMongoDbConnection;
-  public readonly user: IMongoDbUser;
+  public readonly connection: mongodb.IMongoDbConnection;
+  public readonly user: mongodb.IMongoDbUser;
   public readonly collection: string;
 
-  constructor(connection: IMongoDbConnection, user: IMongoDbUser, collection: string, level: string) {
+  constructor(connection: mongodb.IMongoDbConnection, user: mongodb.IMongoDbUser, collection: string, level: string) {
     super(level);
 
     this.connection = connection;
@@ -29,12 +24,12 @@ export class WinstonMongoDbTransportConfiguration extends BaseWinstonTransportCo
   public Validate(): void {
     super.Validate();
 
-    ValidateMongoDbConnection(this.connection);
-    ValidateMongoDbUser(this.user);
+    mongodb.ValidateMongoDbConnection(this.connection);
+    mongodb.ValidateMongoDbUser(this.user);
   }
 
   public async InitTransportAsync(): Promise<any> {
-    let client: MongoClient = await CreateMongoDbClientAsync(this.connection, this.user);
+    let client: MongoClient = await mongodb.CreateMongoDbClientAsync(this.connection, this.user);
 
     let transportOptions = {
       level: this.level,
