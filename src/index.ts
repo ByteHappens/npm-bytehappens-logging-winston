@@ -1,7 +1,7 @@
 import * as internalCore from "./core";
-import * as internalConsole from "./console";
-import * as internalTelegram from "./telegram";
-import * as internalMongoDb from "./mongodb";
+import * as internalConsole from "./logging-console";
+import * as internalTelegram from "./logging-telegram";
+import * as internalMongoDb from "./logging-mongodb";
 
 export namespace loggingWinston {
   //  SCK: Not too happy about this, will change when i figure how to put it at root

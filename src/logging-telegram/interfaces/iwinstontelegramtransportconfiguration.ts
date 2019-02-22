@@ -1,4 +1,4 @@
-import { IWinstonTransportConfiguration } from "../../bytehappens-winston";
+import { IWinstonTransportConfiguration } from "../../core";
 
 export interface IWinstonTelegramTransportConfiguration extends IWinstonTransportConfiguration {
   token: string;

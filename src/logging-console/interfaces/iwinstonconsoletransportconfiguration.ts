@@ -1,3 +1,3 @@
-import { IWinstonTransportConfiguration } from "../../bytehappens-winston";
+import { IWinstonTransportConfiguration } from "../../core";
 
 export interface IWinstonConsoleTransportConfiguration extends IWinstonTransportConfiguration {}

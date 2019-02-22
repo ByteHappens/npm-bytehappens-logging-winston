@@ -1,6 +1,6 @@
 let Telegram = require("winston-telegram");
 
-import { BaseWinstonTransportConfiguration } from "../bytehappens-winston";
+import { BaseWinstonTransportConfiguration } from "../core";
 
 import { IWinstonTelegramTransportConfiguration } from "./interfaces/iwinstontelegramtransportconfiguration";
 

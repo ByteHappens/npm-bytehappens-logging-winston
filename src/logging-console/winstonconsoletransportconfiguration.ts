@@ -1,6 +1,6 @@
 import { transports } from "winston";
 
-import { BaseWinstonTransportConfiguration } from "../bytehappens-winston";
+import { BaseWinstonTransportConfiguration } from "../core";
 
 import { IWinstonConsoleTransportConfiguration } from "./interfaces/iwinstonconsoletransportconfiguration";
 

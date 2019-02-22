@@ -1,6 +1,6 @@
 import { logging } from "bytehappens";
 
-import { WinstonLoggerFactory } from "../bytehappens-winston";
+import { WinstonLoggerFactory } from "../core";
 
 import { IWinstonConsoleTransportConfiguration } from "./interfaces/iwinstonconsoletransportconfiguration";
 import { WinstonConsoleLogger } from "./winstonconsolelogger";
