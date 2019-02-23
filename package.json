@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "bytehappens-storage-mongodb": "0.0.6",
+    "mongodb": "^3.1.13",
     "winston": "^3.2.1",
     "winston-mongodb": "^4.0.3",
     "winston-telegram": "^2.0.0"
