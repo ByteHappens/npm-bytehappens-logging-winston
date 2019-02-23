@@ -23,7 +23,7 @@
     "test": "mocha tests/*.tests.ts -r ts-node/register --reporter spec --exit"
   },
   "dependencies": {
-    "bytehappens-storage-mongodb": "0.0.5",
+    "bytehappens-storage-mongodb": "0.0.6",
     "winston": "^3.2.1",
     "winston-mongodb": "^4.0.3",
     "winston-telegram": "^2.0.0"
