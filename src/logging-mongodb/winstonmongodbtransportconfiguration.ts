@@ -39,7 +39,8 @@ export class WinstonMongoDbTransportConfiguration extends BaseWinstonTransportCo
     let transportOptions = {
       level: this.level,
       db: client,
-      collection: this.collection
+      collection: this.collection,
+      metaKey: "meta"
     };
 
     let response: any = new MongoDB(transportOptions);
